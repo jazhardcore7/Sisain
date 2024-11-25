@@ -1,7 +1,7 @@
 # Sisain 
 # Sisain - Transform what you have into What you Crave !
 
-![Sisain Logo](https://ibb.co.com/L1567Dh)
+<img src="https://ibb.co.com/L1567Dh" alt="mylogo" width="300" height="200" style="border: 1px solid #000;">
 
 ## Table of Contents
 - [Introduction](#introduction)
