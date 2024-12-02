@@ -18,16 +18,19 @@
 Sisain is an Android application designed to help users discover and cook delicious recipes based on the ingredients they have at home. The app allows users to input available ingredients, dietary restrictions, and search for recipes that match their criteria.
 
 ## Features
-- **User Authentication**: Sign up and log in using Firebase Authentication.
+- **User Authentication**: Sign up and log in 
 - **Recipe Search**: Search for recipes by name or ingredients.
 - **Favorites**: Save your favorite recipes for easy access.
 - **Recipe Details**: View detailed information about each recipe, including ingredients, instructions and equipments.
 - **Profile Section**: Sets your profile for more personalization
+
+  
 ## Technologies Used
 - **Android Studio**: IDE for Android development.
-- **Firebase**: For user authentication and database management.
-- **Edamam API**: For fetching recipe data.
-- **Compose**: For more opitmal, easy use and development.
+-
+-
+-
+-
 
 ## Installation
 To install and run the Sisain app locally, follow these steps:
@@ -35,3 +38,5 @@ To install and run the Sisain app locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/sisain.git
+
+2. Open and Run the project file with Android Studio
