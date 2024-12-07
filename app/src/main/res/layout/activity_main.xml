@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Profile Button in Top-Right -->
+    <!-- Make sure the image is in the drawable folder -->
+    android:contentDescription="User Profile"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:clickable="true"
+    android:onClick="goToUserProfile"/>
+
+    <!-- Welcome Text -->
+    <ImageView
+        android:id="@+id/profile_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user_profile"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Sisain!"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

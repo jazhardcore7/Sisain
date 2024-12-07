@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sisain</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
 </resources>
