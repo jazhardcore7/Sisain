@@ -41,6 +41,12 @@ android {
 
 dependencies {
 
+
+
+        implementation(libs.androidx.appcompat)
+    implementation (libs.androidx.viewpager2)  // Untuk ViewPager2
+    implementation (libs.androidx.fragment.ktx)
+        implementation(libs.androidx.appcompat.resources)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -49,8 +55,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation (libs.de.circleimageview)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)

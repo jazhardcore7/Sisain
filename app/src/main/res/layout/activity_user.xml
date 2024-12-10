@@ -6,30 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.ui.views.User">
 
-    <!-- User Full Name -->
+
     <TextView
         android:id="@+id/user_fullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Full Name: John Doe"
+        android:textAlignment="textEnd"
         android:textSize="18sp"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="76dp" />
 
-    <!-- User Email -->
+
+    <!-- Page Separator -->
+
     <TextView
         android:id="@+id/user_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/user_fullname"
         android:text="Email: john.doe@example.com"
         android:textSize="16sp"
-        android:layout_below="@id/user_fullname"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="118dp" />
 
-    <!-- Page Separator -->
     <View
         android:layout_width="0dp"
         android:layout_height="1dp"
@@ -58,7 +58,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_info"  <!-- Replace with your icon -->
+            android:src="@drawable/ic_rate"
         android:layout_gravity="end"/>
     </LinearLayout>
 
@@ -81,7 +81,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_rate"  <!-- Replace with your icon -->
+            android:src="@drawable/ic_rate"
         android:layout_gravity="end"/>
     </LinearLayout>
 
@@ -102,5 +102,12 @@
             android:textSize="16sp"
             android:layout_gravity="start"/>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="39dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
