@@ -1,42 +1,95 @@
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
+from ast import literal_eval
 import tensorflow as tf
+import pandas as pd
 import numpy as np
+import string
+
+# dictionary that contain id for word recognized by the model
+# e.g.: {'give': 2, 'recipe': 4, 'me': 5}
+word2id = np.load('vocabs.npy', allow_pickle='TRUE').item()
+
+recipe_path = './recipe.csv'
+recipes_df = pd.read_csv(recipe_path)
+
+# "cache" recipes list into vector
+vectorizer = TfidfVectorizer()
+recipes_vector = vectorizer.fit_transform(recipes_df['ingredients'])
 
 # Definisikan skema input menggunakan Pydantic
 class IngredientRequest(BaseModel):
-    ingredients: List[str]
+    sentence: str
 
 # Buat kelas untuk memuat model dan melakukan prediksi
 class RecipeModel:
     def __init__(self, model_path: str):
         self.model = tf.keras.models.load_model(model_path)
+        self.maxlen = 137 # panjang maximal sequence
+
+    def sentences2sequences(self, sentences: str):
+        sequences = []
+        for sentence in sentences:
+            trans = str.maketrans('', '', string.punctuation)
+            words = (sentence.translate(trans)).split() # remove punctuation & split
+            sequence = [word2id[word] if word in word2id else 0 for word in words]
+            sequences.append(sequence)
+        return sequences
     
-    def predict_recipe(self, ingredients: list):
-        input_data = self.preprocess(ingredients)
+    def predict_recipe(self, sentence: list):
+        input_data = self.preprocess(sentence)
         predictions = self.model.predict(input_data)
-        return self.postprocess(predictions)
+        predictions = np.argmax(predictions, axis=-1)[0]
+
+        # remove punctuation and split
+        trans = str.maketrans('', '', string.punctuation)
+        words = (sentence.translate(trans)).split()
+
+        # List bahan makanan yang ter-extract: ['egg', 'milk']
+        ingredients = [words[i] for i, tagid in enumerate(predictions) if tagid > 0] 
+
+        ingredients = ''
+        if len(ingredients) == 0:
+            ingredients = sentence
+        else:
+            ingredients = " ".join(ingredients)
+
+        return self.postprocess(ingredients)
     
-    def preprocess(self, ingredients: list):
+    def preprocess(self, sentence: str):
         # Implementasikan preprocessing yang diperlukan
-        # Misalnya, ubah daftar bahan menjadi fitur numerik
-        ingredient_vector = np.zeros((1, 10))  # Asumsikan panjang vektor input adalah 10
-        for i, ingredient in enumerate(ingredients):
-            if i < 10:
-                ingredient_vector[0, i] = len(ingredient)  # Misal mengisi vektor dengan panjang string bahan makanan
-        return ingredient_vector
+        # Misalnya, ubah text menjadi vector/sequence of number
+        # e.g.: "give me recipe from egg and milk" -> [2, 30, 5, 4, 6, 20, 11]
+        sequence = self.sentences2sequences(sentence)
+        sequence = pad_sequences(sequence, maxlen=self.maxlen, padding="post")
+
+        return sequence
     
-    def postprocess(self, predictions):
+    def postprocess(self, predictions: str):
         # Implementasikan postprocessing untuk mengubah prediksi menjadi resep
-        # Ini hanya contoh, Anda perlu menyesuaikan dengan output model Anda
-        return {
-            "recipe_name": "Example Recipe",
-            "steps": ["Step 1", "Step 2", "Step 3"]
-        }
+        # Cari resep yang paling mirip dengan ingredients, hitung skor
+        ingredients_vector = vectorizer.transform([predictions])
+        score = cosine_similarity(ingredients_vector, recipes_vector).flatten()
+
+         # Cari 3 besar skor terbaik
+        top_indices = np.argpartition(score, -3)[-3:]  # Get indices of top 3 scores
+        top_recipes = recipes_df.iloc[top_indices]  # Get the corresponding recipes
+
+        results = []
+        for index in top_indices:
+            results.append({
+                'recipe_name': recipes_df.iloc[index]['title'],
+                'steps': literal_eval(recipes_df.iloc[index]['directions']),
+            })
+
+        return results
 
 # Inisialisasi model
-model = RecipeModel("D:\File Faisal\API_Model\model.h5")
+model = RecipeModel('./model.h5')
 
 # Inisialisasi FastAPI
 app = FastAPI()
@@ -45,11 +98,11 @@ app = FastAPI()
 @app.post("/predict")
 async def get_recipe(ingredient_request: IngredientRequest):
     try:
-        ingredients = ingredient_request.ingredients
-        recipe = model.predict_recipe(ingredients)
+        sentence = ingredient_request.sentence
+        recipes = model.predict_recipe(sentence)
         return {
-            "ingredients": ingredients,
-            "recipe": recipe
+            "sentence": sentence,
+            "recipes": recipes
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
