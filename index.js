@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/sisain", router);
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Nutricipe backend!");
+  res.send("Welcome to sisain backend!");
 });
 
 // Middleware untuk menangani rute yang tidak ditemukan
@@ -36,5 +36,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log("Nutricipe app listening on port ${port}");
+  console.log("sisain app listening on port ${port}");
 });
