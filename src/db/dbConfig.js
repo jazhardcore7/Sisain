@@ -1,8 +1,8 @@
 const Firestore = require('@google-cloud/firestore');
 const path = require('path');
 
-const pathKey = path.resolve('./keyFile.json');
-const idProject = process.env.PROJECT_ID || 'nutricipe-coba';
+const pathKey = path.resolve('KeyFile.json');
+const idProject = process.env.PROJECT_ID || 'sisain-project-f354b';
 
 const db = new Firestore({
     projectId: idProject,
