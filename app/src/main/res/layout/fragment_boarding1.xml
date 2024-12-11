@@ -13,8 +13,8 @@
         android:layout_centerInParent="true"
         android:text="Selamat datang di Aplikasi Kami!"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="378dp" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="349dp" />
 
     <Button
         android:id="@+id/next_button"

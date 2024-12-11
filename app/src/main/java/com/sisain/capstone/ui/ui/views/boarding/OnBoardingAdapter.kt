@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class OnboardingAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
 
     override fun getItemCount(): Int {
-        return 3  // Ada tiga halaman (First, Second, Third)
+        return 2  // Ada tiga halaman (First, Second, Third)
     }
 
     override fun createFragment(position: Int): Fragment {

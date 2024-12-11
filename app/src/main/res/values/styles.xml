@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Sisain" parent="Theme.MaterialComponents.DayNight.NoActionBar">
     </style>
 
-    <!-- OnBoarding styles -->
+    <!-- Button styles -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@color/border_search</item>
+    </style>
+
 
 </resources>

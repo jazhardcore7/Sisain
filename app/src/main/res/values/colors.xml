@@ -3,10 +3,13 @@
     <color name="colorPrimary">#6E5050</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorSecondary">#9A7E6F</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnPrimary">#E9EED9</color>
     <color name="colorAccent">#CBD2A4</color>
     <color name="colorThird">#CBD2A4</color>
+    <color name="colorTextsearch">#766565</color>
     <color name="colorGreenDarker">#002626</color>
     <color name="colorAccentAlpha_10">#1A95C623</color>
     <color name="colorGreenDarkerAlpha_10">#002626</color>
+    <color name="border_search">#8B6F5E</color>
+    <color name="light_bg_search">#FAF9F6</color>
 </resources>

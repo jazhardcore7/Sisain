@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.sisain.capstone.MainActivity
 import com.sisain.capstone.R
+import com.sisain.capstone.ui.ui.views.auth.LoginActivity
+import com.sisain.capstone.ui.ui.views.auth.RegisterActivity
 
 
 class OnBoardingActivity : AppCompatActivity() {
@@ -40,6 +42,14 @@ class OnBoardingActivity : AppCompatActivity() {
                 }
             }
         })
+        val createAccountButton = findViewById<Button>(R.id.btn_create_account)
+        createAccountButton.setOnClickListener {
+        startActivity(Intent(this, RegisterActivity::class.java))
+        }
+        val loginButton = findViewById<Button>(R.id.btn_login)
+        loginButton.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 }
 

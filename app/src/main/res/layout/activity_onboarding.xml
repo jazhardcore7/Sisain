@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+
     <!-- Buttons for "Create Account" or "Login" (in the third page) -->
     <LinearLayout
         android:id="@+id/onboarding_buttons"

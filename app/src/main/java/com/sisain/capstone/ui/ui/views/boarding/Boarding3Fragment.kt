@@ -16,22 +16,25 @@ class Boarding3Fragment : Fragment(R.layout.fragment_boarding3) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Mengatur tombol kembali
         val backButton = view.findViewById<ImageButton>(R.id.back_button)
         backButton.setOnClickListener {
-            // Navigasi ke MainActivity atau halaman sebelumnya
-            (activity as? OnBoardingActivity)?.onBackPressed()
+            // Kembali ke halaman sebelumnya
+            requireActivity().onBackPressed()
         }
 
+        // Mengatur tombol Create Account
         val createAccountButton = view.findViewById<Button>(R.id.create_account_button)
         createAccountButton.setOnClickListener {
-            // Navigasi ke halaman pembuatan akun
-            startActivity(Intent(context, RegisterActivity::class.java))
+            // Arahkan ke Create Account Activity
+            startActivity(Intent(requireContext(), RegisterActivity::class.java))
         }
 
+        // Mengatur tombol Login
         val loginButton = view.findViewById<Button>(R.id.login_button)
         loginButton.setOnClickListener {
-            // Navigasi ke halaman login
-            startActivity(Intent(context, LoginActivity::class.java))
+            // Arahkan ke Login Activity
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
         }
     }
 }

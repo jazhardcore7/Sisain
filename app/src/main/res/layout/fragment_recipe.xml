@@ -1,0 +1,107 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorOnPrimary">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_home"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/iv_profile"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/user_profile"
+            android:contentDescription="Profile"
+            android:background="@color/colorOnPrimary"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:background="@color/colorOnPrimary">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/search_text"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:background="@drawable/bg_search"
+            android:textColor="@color/material_on_primary_disabled"
+            android:textSize="16sp"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+
+    <!-- Ingredients Box -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- Ingredient Item -->
+            <Button
+                android:id="@+id/btn_add_ingredient"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button"
+                android:drawableStart="@drawable/ic_add"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:text="@string/add_ingridients"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <!-- Repeat Ingredient Chips -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Recipe Cards -->
+    <TextView
+        android:id="@+id/tv_selection_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/header_recommend"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"/>
+</LinearLayout>
