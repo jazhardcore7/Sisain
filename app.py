@@ -35,36 +35,37 @@ class RecipeModel:
         sequences = []
         for sentence in sentences:
             trans = str.maketrans('', '', string.punctuation)
-            words = (sentence.translate(trans)).split() # remove punctuation & split
+            words = sentence.translate(trans).split() # remove punctuation & split
             sequence = [word2id[word] if word in word2id else 0 for word in words]
             sequences.append(sequence)
         return sequences
     
-    def predict_recipe(self, sentence: list):
+    def predict_recipe(self, sentence: str):
         input_data = self.preprocess(sentence)
         predictions = self.model.predict(input_data)
         predictions = np.argmax(predictions, axis=-1)[0]
 
         # remove punctuation and split
         trans = str.maketrans('', '', string.punctuation)
-        words = (sentence.translate(trans)).split()
+        words = sentence.translate(trans).split()
 
         # List bahan makanan yang ter-extract: ['egg', 'milk']
         ingredients = [words[i] for i, tagid in enumerate(predictions) if tagid > 0] 
 
-        ingredients = ''
+        # convert ingredients list ke string: ['egg', 'milk'] -> "egg milk"
+        ingredients_str = ''
         if len(ingredients) == 0:
-            ingredients = sentence
+            ingredients_str = sentence
         else:
-            ingredients = " ".join(ingredients)
+            ingredients_str = " ".join(ingredients)
 
-        return self.postprocess(ingredients)
+        return self.postprocess(ingredients_str)
     
     def preprocess(self, sentence: str):
         # Implementasikan preprocessing yang diperlukan
         # Misalnya, ubah text menjadi vector/sequence of number
         # e.g.: "give me recipe from egg and milk" -> [2, 30, 5, 4, 6, 20, 11]
-        sequence = self.sentences2sequences(sentence)
+        sequence = self.sentences2sequences([sentence])
         sequence = pad_sequences(sequence, maxlen=self.maxlen, padding="post")
 
         return sequence
@@ -72,6 +73,7 @@ class RecipeModel:
     def postprocess(self, predictions: str):
         # Implementasikan postprocessing untuk mengubah prediksi menjadi resep
         # Cari resep yang paling mirip dengan ingredients, hitung skor
+        print(predictions)
         ingredients_vector = vectorizer.transform([predictions])
         score = cosine_similarity(ingredients_vector, recipes_vector).flatten()
 
