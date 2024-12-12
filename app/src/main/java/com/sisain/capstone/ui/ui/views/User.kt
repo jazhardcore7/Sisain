@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.sisain.capstone.MainActivity
 import com.sisain.capstone.R
 import com.sisain.capstone.databinding.ActivityUserBinding
 
@@ -16,6 +17,10 @@ class User : AppCompatActivity() {
         val binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         // Set up "Rate Us" and "About Us" click listeners
         binding.aboutUsRow.setOnClickListener {
             val intent = Intent(this, CreatorActivity::class.java)
