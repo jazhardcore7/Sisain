@@ -2,6 +2,23 @@
     <string name="app_name">Sisain</string>
     <string name="title_activity_user_profile">UserProfileActivity</string>
 
+    <!-- Splash Strings -->
+    <string name="title_splash">Transform What You Have\nInto\nWhat You Crave</string>
+    <string name="logo_description">Sisain App logo</string>
+
+    <!-- Onboarding Strings -->
+    <string name="title_on_boarding_first_slide">Welcome To Sisain!</string>
+    <string name="description_on_boarding_first_slide">Welcome to Sisain, where your kitchen creativity meets sustainability! Our app helps you make the most of your ingredients by providing delicious recipes tailored to what you already have on hand.</string>
+    <string name="title_on_boarding_second_slide">Discover Endless Possibilities</string>
+    <string name="description_on_boarding_second_slide">With Sisain, every meal is an opportunity to explore new flavors and techniques. Our smart recipe suggestions are designed to inspire you, utilizing the ingredients you already have at home</string>
+    <string name="title_on_boarding_third_slide">Cook Smart, Waste Less with Sisain!</string>
+    <string name="description_on_boarding_third_slide">Simply input what you have on hand, and let our app suggest tailored recipes that minimize waste and maximize flavor. Whether you are a busy professional, a student, or a home chef, Sisain makes cooking easy, fun, and sustainable.</string>
+    <string name="title_button_next">Next</string>
+    <string name="title_button_register">Create An Account</string>
+    <string name="title_button_login">Already have an Account? Sign In</string>
+    <string name="boarding1_description">Illustration Onboarding First Page</string>
+    <string name="boarding2_description">Illustration Onboarding Second Page</string>
+    <string name="boarding3_description">Illustration Onboarding Third Page</string>
 
     <!-- Recipe home value -->
     <string name="add_ingridients">+ Tambahkan bahan</string>
