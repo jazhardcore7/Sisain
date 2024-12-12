@@ -8,8 +8,23 @@
     <string name="search_text">Cari atau tambahkan bahan anda disini</string>
     <string name="header_home">Find Your Recipes</string>
     <string name="header_recommend">Selection Choice</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_recipe">Judul Resep</string>
+    <string name="title_recipe_in_detail">Nama Resep</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favourite">Favourite</string>
+    <string name="recipe">Recipe</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="back_button">Back Button</string>
+    <string name="recipe_details">Recipe Details</string>
 
     <!-- -->
+    <string-array name="data_local_recommend">
+        <item>https://drive.google.com/file/d/1pAn9XGUWBx6Y-j1PkMGPCuLY-jf0u83_/view?usp=sharing</item>
+        <item>https://drive.google.com/file/d/1hjvS2JyUd6sLqrOGc8c5B8nStt9N4k5I/view?usp=sharing</item>
+        <item>https://drive.google.com/file/d/1dSvQgN7jtCy4E7XCGUER9Te2w69kWFHA/view?usp=sharing</item>
+        <item>https://drive.google.com/file/d/1Uzn-PuMX7Vg1qyLywg4CPESAEkyg_AQy/view?usp=sharing</item>
+        <item>https://drive.google.com/file/d/1RWHcU-fW2jOkJhWPaogybYjjVUXYaRpO/view?usp=sharing</item>
+        <item>https://drive.google.com/file/d/16UN-aZc62KkMFhO8LkwqiqPeCy3w9p44/view?usp=sharing</item>
+
+    </string-array>
 </resources>

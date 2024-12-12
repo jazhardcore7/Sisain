@@ -21,14 +21,14 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/ic_back"
-                android:contentDescription="Back Button"
+                android:contentDescription="@string/back_button"
                 android:background="@null" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="Recipe Details"
+                android:text="@string/recipe_details"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary" />
@@ -58,10 +58,10 @@
                     android:id="@+id/tv_recipe_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cheeseburger Potato Soup"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/dark_brown" />
+                    android:layout_marginStart="0dp"
+                    android:textColor="@color/colorPrimary" />
 
                 <ImageButton
                     android:id="@+id/btn_favourite"
@@ -81,7 +81,7 @@
             android:text="Ingredients"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/dark_brown" />
+            android:textColor="@color/colorPrimary" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_ingredients"
@@ -97,7 +97,7 @@
             android:text="Preparation"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/dark_brown" />
+            android:textColor="@color/colorPrimary" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_preparation"
