@@ -91,7 +91,7 @@ class RecipeModel:
         return results
 
 # Inisialisasi model
-model = RecipeModel('./model.h5')
+model = RecipeModel('https://storage.googleapis.com/sisain-bucket1/machineLearning_model/model.h5')
 
 # Inisialisasi FastAPI
 app = FastAPI()
