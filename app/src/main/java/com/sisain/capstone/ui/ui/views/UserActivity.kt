@@ -3,15 +3,11 @@ package com.sisain.capstone.ui.ui.views
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.sisain.capstone.MainActivity
-import com.sisain.capstone.R
 import com.sisain.capstone.databinding.ActivityUserBinding
 
-class User : AppCompatActivity() {
+class UserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityUserBinding.inflate(layoutInflater)

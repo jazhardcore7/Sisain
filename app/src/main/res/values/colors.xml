@@ -13,5 +13,6 @@
     <color name="colorGreenDarkerAlpha_10">#002626</color>
     <color name="border_search">#8B6F5E</color>
     <color name="card_bg">#749E4B</color>
+    <color name="white">#FFFFFF</color>
     <color name="light_bg_search">#FAF9F6</color>
 </resources>

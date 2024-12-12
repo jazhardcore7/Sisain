@@ -13,8 +13,6 @@ import com.sisain.capstone.databinding.ActivityRecipeDetailBinding
 class RecipeDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRecipeDetailBinding
-    private lateinit var ingredientAdapter: IngredientAdapter
-    private lateinit var preparationAdapter: PreparationAdapter
     private var isFavourite = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,13 +43,13 @@ class RecipeDetailActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerViews() {
-        ingredientAdapter = IngredientAdapter()
-        binding.rvIngredients.apply {
+        recipeNameAdapter = RecipeNameAdapter()
+        binding.rv_recipe_name.apply {
             layoutManager = LinearLayoutManager(this@RecipeDetailActivity)
-            adapter = ingredientAdapter
+            adapter = recipeNameAdapter
         }
 
-        preparationAdapter = PreparationAdapter()
+        stepsAdapter = StepsAdapter()
         binding.rvPreparation.apply {
             layoutManager = LinearLayoutManager(this@RecipeDetailActivity)
             adapter = preparationAdapter

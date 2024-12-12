@@ -1,5 +1,6 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorThird"
@@ -53,55 +54,55 @@
                 android:orientation="vertical"
                 android:layout_marginStart="16dp">
 
-                <TextView
-                    android:id="@+id/tv_recipe_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="0dp"
-                    android:textColor="@color/colorPrimary" />
-
-                <ImageButton
-                    android:id="@+id/btn_favourite"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_favourite"
-                    android:contentDescription="Favourite Button"
-                    android:background="@null" />
             </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_favourite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@null"
+                android:contentDescription="@string/favourite_button"
+                android:src="@drawable/ic_favourite" />
+
         </LinearLayout>
 
         <!-- Ingredients -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorOnPrimary">
+            <TextView
+                android:id="@+id/tv_recipe_name"
+                android:paddingTop="14dp"
+                android:paddingStart="120dp"
+                android:text="@string/recipe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+
         <TextView
+            android:id="@+id/steps_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Ingredients"
+            android:text="@string/steps"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_ingredients"
+            android:id="@+id/rv_steps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp" />
 
-        <!-- Preparation -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Preparation"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_preparation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
     </LinearLayout>
 </ScrollView>

@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Sisain" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
+        <item name="hintTextColor">@style/EditTextHint</item>
     </style>
 
+    <!-- Button styles -->
+    <style name="CustomButtonStyleBoard" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@color/border_search</item>
+        <item name="android:fontFamily">@font/itim_font_family</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="EditTextHint" parent="Widget.AppCompat.EditText">
+        <!-- Warna hint -->
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <!-- Warna teks yang dimasukkan pengguna -->
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
     <!-- Button styles -->
     <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/bg_button</item>

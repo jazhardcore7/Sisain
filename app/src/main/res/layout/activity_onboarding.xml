@@ -19,7 +19,7 @@
             android:id="@+id/dotsIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:dotColor="@color/colorSecondary"
+            app:dotsColor="@color/colorSecondary"
             app:layout_constraintTop_toBottomOf="@id/viewPager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

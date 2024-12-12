@@ -2,6 +2,7 @@ package com.sisain.capstone.ui.ui.views.boarding
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.sisain.capstone.MainActivity
@@ -34,7 +35,7 @@ class OnBoardingActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
-        val createAccountButton = findViewById<Button>(R.id.btn_create_account)
+        val createAccountButton = findViewById<Button>(R.id.btn_register)
         createAccountButton.setOnClickListener {
         startActivity(Intent(this, RegisterActivity::class.java))
         }
