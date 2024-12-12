@@ -16,15 +16,14 @@
     <string name="recipe_name">Recipe Name</string>
     <string name="back_button">Back Button</string>
     <string name="recipe_details">Recipe Details</string>
-
-    <!-- -->
-    <string-array name="data_local_recommend">
-        <item>https://drive.google.com/file/d/1pAn9XGUWBx6Y-j1PkMGPCuLY-jf0u83_/view?usp=sharing</item>
-        <item>https://drive.google.com/file/d/1hjvS2JyUd6sLqrOGc8c5B8nStt9N4k5I/view?usp=sharing</item>
-        <item>https://drive.google.com/file/d/1dSvQgN7jtCy4E7XCGUER9Te2w69kWFHA/view?usp=sharing</item>
-        <item>https://drive.google.com/file/d/1Uzn-PuMX7Vg1qyLywg4CPESAEkyg_AQy/view?usp=sharing</item>
-        <item>https://drive.google.com/file/d/1RWHcU-fW2jOkJhWPaogybYjjVUXYaRpO/view?usp=sharing</item>
-        <item>https://drive.google.com/file/d/16UN-aZc62KkMFhO8LkwqiqPeCy3w9p44/view?usp=sharing</item>
-
-    </string-array>
+    <string name="save_your_fav">Save your favourite recipe by clicking Heart Button in Recipe Detail Page</string>
+    <string name="empty_state_image">Empty State Image</string>
+    <string name="no_favourites_yet">No Favourites Yet</string>
+    <string name="log_out">Log Out</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="about_us">About Us</string>
+    <string name="email_john_doe_example_com">Email: john.doe@example.com</string>
+    <string name="full_name_john_doe">Full Name: John Doe</string>
+    <string name="header_profile">My Profile</string>
+    <string name="capstone">Capstone </string>
 </resources>

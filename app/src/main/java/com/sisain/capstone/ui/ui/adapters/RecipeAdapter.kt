@@ -26,7 +26,7 @@ class RecipeAdapter(private val recipes: List<Recipe>) : RecyclerView.Adapter<Re
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = recipes[position]
         holder.tvName.text = recipe.name
-        holder.imgRecipe.setImageResource(recipe.imageResId)  // Load image from local resources
+        holder.imgRecipe.setImageResource(recipe.imageResId)
     }
 
     override fun getItemCount(): Int {

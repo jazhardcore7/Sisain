@@ -1,113 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorbgprof"
     tools:context=".ui.ui.views.User">
 
+    <LinearLayout
+        android:id="@+id/header_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:background="@color/colorbgprof"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/header_profile"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="98dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="68dp"
+        tools:srcCompat="@drawable/ic_logo" />
 
     <TextView
         android:id="@+id/user_fullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Full Name: John Doe"
+        android:layout_marginStart="24dp"
+        android:text="@string/full_name_john_doe"
         android:textAlignment="textEnd"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="122dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         tools:layout_editor_absoluteY="76dp" />
 
-
-    <!-- Page Separator -->
 
     <TextView
         android:id="@+id/user_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/user_fullname"
-        android:text="Email: john.doe@example.com"
+        android:layout_marginStart="16dp"
+        android:text="@string/email_john_doe_example_com"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="122dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         tools:layout_editor_absoluteY="118dp" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_below="@id/user_email"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/darker_gray"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:background="@android:color/darker_gray" />
 
-    <!-- About Us Row -->
+
     <LinearLayout
+        android:background="@color/colorThird"
         android:id="@+id/about_us_row"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/user_email"
-        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/rate_us_row">
+
         <TextView
+            android:paddingTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About Us"
-            android:textSize="16sp"
-            android:layout_gravity="start"/>
+            android:layout_gravity="start"
+            android:text="@string/about_us"
+            android:textSize="16sp" />
+
         <ImageView
+            android:layout_marginTop="20dp"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_rate"
-        android:layout_gravity="end"/>
+            android:layout_marginLeft="280dp"
+            android:src="@drawable/ic_rate" />
     </LinearLayout>
 
-    <!-- Rate Us Row -->
+
     <LinearLayout
+        android:background="@color/colorThird"
         android:id="@+id/rate_us_row"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/about_us_row"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/about_us_row"
+        app:layout_constraintTop_toBottomOf="@+id/user_email">
+
+
         <TextView
+            android:paddingTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rate Us"
-            android:textSize="16sp"
-            android:layout_gravity="start"/>
+            android:layout_gravity="start"
+            android:text="@string/rate_us"
+            android:textSize="16sp" />
+
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_rate"
-        android:layout_gravity="end"/>
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_rate" />
     </LinearLayout>
 
     <!-- Log Out Row -->
     <LinearLayout
+        android:background="@color/colorThird"
         android:id="@+id/logout_row"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/rate_us_row"
-        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/about_us_row">
+
         <TextView
+            android:paddingTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log Out"
-            android:textSize="16sp"
-            android:layout_gravity="start"/>
+            android:layout_gravity="start"
+            android:text="@string/log_out"
+            android:textSize="16sp" />
+
+        <ImageView
+
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+           android:layout_marginTop="20dp"
+            android:layout_marginLeft="290dp"
+            android:src="@drawable/ic_rate" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="39dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="240dp"
+        android:text="@string/capstone"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logout_row" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

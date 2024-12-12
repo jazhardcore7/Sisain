@@ -6,6 +6,7 @@
     <color name="colorOnPrimary">#E9EED9</color>
     <color name="colorAccent">#CBD2A4</color>
     <color name="colorThird">#CBD2A4</color>
+    <color name="colorbgprof">#EEFAF1</color>
     <color name="colorTextsearch">#766565</color>
     <color name="colorGreenDarker">#002626</color>
     <color name="colorAccentAlpha_10">#1A95C623</color>
