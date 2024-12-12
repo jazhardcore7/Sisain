@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.sisain.capstone">
+    package="com.sisain.capstone" >
 
     <application
         android:allowBackup="true"
@@ -11,44 +11,38 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Sisain"
-        tools:targetApi="31">
+        android:theme="@style/Theme.AppCompat"
+        tools:targetApi="31" >
+        <!-- Splash Activity -->
         <activity
-            android:name=".ui.ui.views.detail.RecipeDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ui.views.auth.RegisterActivity"
-            android:exported="false"
-            android:theme="@style/Sisain" />
-        <activity
-            android:name=".ui.ui.views.auth.LoginActivity"
-            android:exported="false"
-            android:theme="@style/Sisain" />
-        <activity
-            android:name=".ui.ui.views.boarding.OnBoardingActivity"
-            android:exported="true"
-            android:theme="@style/Sisain">
+            android:name=".ui.ui.views.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.ui.views.auth.RegisterActivity"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.views.auth.LoginActivity"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui.views.boarding.OnBoardingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".ui.ui.views.User"
-            android:exported="false" /> <!-- Optional, only for API level-specific configurations -->
-        <!-- UserProfileActivity declaration -->
-        <!-- MainActivity declaration with MAIN and LAUNCHER intent-filter -->
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/Theme.AppCompat" >
         </activity>
     </application>
 
