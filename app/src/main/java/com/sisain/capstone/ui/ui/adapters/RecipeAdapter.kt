@@ -19,20 +19,15 @@ class RecipeAdapter(private val recipes: List<Recipe>) : RecyclerView.Adapter<Re
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_card, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
         return RecipeViewHolder(view)
     }
 
-        override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-            val recipe = recipes[position]
-            holder.tvName.text = recipe.name
-
-            Glide.with(holder.itemView.context)
-                .load(recipe.imageUrl)
-                .placeholder(R.layout.item_card)
-                .into(holder.imgRecipe)
-        }
+    override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
+        val recipe = recipes[position]
+        holder.tvName.text = recipe.name
+        holder.imgRecipe.setImageResource(recipe.imageResId)  // Load image from local resources
+    }
 
     override fun getItemCount(): Int {
         return recipes.size

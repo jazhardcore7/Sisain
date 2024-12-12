@@ -29,10 +29,12 @@ class RecipeFragment : Fragment() {
 
         // Dummy Data
         val dummyRecipes = listOf(
-            Recipe("Chicken Egg Scramble", "https://drive.google.com/file/d/1pAn9XGUWBx6Y-j1PkMGPCuLY-jf0u83_/view?usp=sharing"),
-            Recipe("Beef Steak",  "https://example.com/image2.jpg"),
-            Recipe("Salad Bowl",  "https://example.com/image3.jpg"),
-            Recipe("Pancake",  "https://example.com/image4.jpg")
+            Recipe("Broccoli Salad", R.drawable.broccoli_salad),
+            Recipe("Cheeseburger Potato Soup",  R.drawable.cheeseburger_potato_soup),
+            Recipe("Fresh Strawberry Pie",  R.drawable.fresh_strawberry_pie),
+            Recipe("Quick Barbecue Wings",  R.drawable.quick_barbecue_wings),
+            Recipe("Rhubarb Coffee Cake",  R.drawable.rhubarb_coffee_cake),
+            Recipe("Smoked Turkey Risotto", R.drawable.smoked_turkey_risotto)
         )
 
         // Set Adapter
