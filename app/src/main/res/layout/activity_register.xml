@@ -141,38 +141,6 @@
         app:layout_constraintTop_toBottomOf="@id/title_register_password"
         android:layout_marginHorizontal="16dp" />
 
-    <!-- Confirm Password -->
-    <TextView
-        android:id="@+id/title_confirm_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/confirm_password"
-        android:textColor="@color/colorPrimary"
-        android:fontFamily="@font/itim_font_family"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/register_password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="16dp"/>
-    <EditText
-        android:id="@+id/confirm_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_confirm_password"
-        android:inputType="textPassword"
-        android:fontFamily="@font/itim"
-        android:background="@drawable/button_placeholder"
-        android:textColorHint="@color/colorPrimary"
-        android:textColor="@color/colorOnPrimary"
-        android:padding="12dp"
-        android:drawableStart="@drawable/confirm_password"
-        android:drawablePadding="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_confirm_password"
-        android:layout_marginHorizontal="16dp" />
-
     <!-- Register Button -->
     <Button
         android:id="@+id/btn_register"
@@ -183,7 +151,7 @@
         android:background="@drawable/regis_rounded_button"
         android:textColor="@color/colorOnPrimary"
         android:fontFamily="@font/itim"
-        app:layout_constraintTop_toBottomOf="@id/confirm_password"
+        app:layout_constraintTop_toBottomOf="@id/register_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="16dp"

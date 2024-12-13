@@ -28,9 +28,9 @@ class RegisterActivity : AppCompatActivity() {
 
         // Tombol untuk register
         binding.btnRegister.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val email = binding.etEmail.text.toString()
-            val password = binding.etPassword.text.toString()
+            val username = binding.registerUsername.text.toString()
+            val email = binding.registerEmail.text.toString()
+            val password = binding.registerPassword.text.toString()
 
             val newUser = User(username = username, email = email, password = password)
             userViewModel.register(newUser) { isSuccess ->

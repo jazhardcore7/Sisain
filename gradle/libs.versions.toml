@@ -25,7 +25,8 @@ viewpager2 = "1.1.0"
 dotsindicator = "4.3"
 googleGmsGoogleServices = "4.4.2"
 firebaseFirestore = "25.1.1"
-
+converterGson = "2.9.0"
+retrofit = "2.9.0"
 
 
 [libraries]
@@ -64,6 +65,8 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "dotsindicator" }
 navigation-ui-ktx = { module = "android.arch.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
