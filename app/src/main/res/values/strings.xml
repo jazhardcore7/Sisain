@@ -7,6 +7,8 @@
     <string name="illustakun_description">Illustration Register and Login Page</string>
     <string name="register_header">Welcome Sainers!</string>
     <string name="register_subheader">Serius belum ada akun? Ya udah, mari kita buat!</string>
+    <string name="login_header">Hello Sainers!</string>
+    <string name="login_subheader">Udah ga sabar banget kann, ayo buruan login</string>
     <string name="register_username">Username</string>
     <string name="hint_register_username">Enter Your Username</string>
     <string name="register_email">Email</string>
@@ -15,6 +17,7 @@
     <string name="hint_register_password">Enter Your Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="hint_confirm_password">Confirm Your Password</string>
+
     <string name="error_username_required">Username is required</string>
     <string name="error_email_required">Email is required</string>
     <string name="error_password_required">Password is required</string>
