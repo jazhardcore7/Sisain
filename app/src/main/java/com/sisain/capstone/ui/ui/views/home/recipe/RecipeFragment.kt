@@ -1,5 +1,6 @@
 package com.sisain.capstone.ui.ui.views.home.recipe
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import com.sisain.capstone.data.api.retrofit.RecipeApi
 import com.sisain.capstone.data.model.Recipe
 import com.sisain.capstone.data.model.Step
 import com.sisain.capstone.ui.ui.adapters.RecipeAdapter
+import com.sisain.capstone.ui.ui.views.UserActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,6 +28,7 @@ class RecipeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var recipeAdapter: RecipeAdapter
     private lateinit var recipeApi: RecipeApi
+    private lateinit var ivProfile: ImageButton
 
     private val dummyRecipes = listOf(
         Recipe("Broccoli Salad", R.drawable.broccoli_salad, listOf(
@@ -82,6 +85,13 @@ class RecipeFragment : Fragment() {
         // Setup Search Bar
         val searchButton = view.findViewById<ImageButton>(R.id.iv_search)
         val searchEditText = view.findViewById<EditText>(R.id.et_search)
+        ivProfile = view.findViewById(R.id.iv_profile)
+
+        ivProfile.setOnClickListener {
+            // Intent untuk membuka UserActivity
+            val intent = Intent(activity, UserActivity::class.java)
+            startActivity(intent)
+        }
 
 
         searchButton.setOnClickListener {

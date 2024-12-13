@@ -31,6 +31,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:text="@string/header_profile"
+            android:textColor="#616161"
             android:textSize="16sp" />
 
     </LinearLayout>
@@ -81,11 +82,12 @@
         app:layout_constraintTop_toBottomOf="@+id/rate_us_row">
 
         <TextView
-            android:paddingTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+            android:paddingTop="20dp"
             android:text="@string/about_us"
+            android:textColor="#1B5E20"
             android:textSize="16sp" />
 
         <ImageView
@@ -93,7 +95,9 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginLeft="280dp"
-            android:src="@drawable/ic_rate" />
+            android:contentDescription="@string/about_us"
+            android:src="@drawable/ic_rate"
+            tools:ignore="RtlHardcoded" />
 
         <View
             android:id="@+id/view"
@@ -137,6 +141,7 @@
             android:layout_gravity="start"
             android:paddingTop="20dp"
             android:text="@string/rate_us"
+            android:textColor="#455A64"
             android:textSize="16sp" />
 
         <ImageView
@@ -144,6 +149,7 @@
             android:layout_height="24dp"
             android:layout_marginLeft="290dp"
             android:layout_marginTop="20dp"
+            android:contentDescription="@string/about_us"
             android:src="@drawable/ic_rate" />
 
     </LinearLayout>
@@ -174,6 +180,7 @@
             android:layout_height="24dp"
            android:layout_marginTop="20dp"
             android:layout_marginLeft="290dp"
+            android:contentDescription="@string/about_us"
             android:src="@drawable/ic_rate" />
     </LinearLayout>
 
