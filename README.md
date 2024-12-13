@@ -53,8 +53,6 @@ This is a demo of our model
 
 ![](docs/in-action.png)
 
-## About the API
-
 ## Setup and Installation
 
 1. Clone repository
