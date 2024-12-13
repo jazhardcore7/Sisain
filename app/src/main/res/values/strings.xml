@@ -2,23 +2,6 @@
     <string name="app_name">Sisain</string>
     <string name="title_activity_user_profile">UserProfileActivity</string>
 
-    <!-- Splash Strings -->
-    <string name="title_splash">Transform What You Have\nInto\nWhat You Crave</string>
-    <string name="logo_description">Sisain App logo</string>
-
-    <!-- Onboarding Strings -->
-    <string name="title_on_boarding_first_slide">Welcome To Sisain!</string>
-    <string name="description_on_boarding_first_slide">Welcome to Sisain, where your kitchen creativity meets sustainability! Our app helps you make the most of your ingredients by providing delicious recipes tailored to what you already have on hand.</string>
-    <string name="title_on_boarding_second_slide">Discover Endless Possibilities</string>
-    <string name="description_on_boarding_second_slide">With Sisain, every meal is an opportunity to explore new flavors and techniques. Our smart recipe suggestions are designed to inspire you, utilizing the ingredients you already have at home</string>
-    <string name="title_on_boarding_third_slide">Cook Smart, Waste Less with Sisain!</string>
-    <string name="description_on_boarding_third_slide">Simply input what you have on hand, and let our app suggest tailored recipes that minimize waste and maximize flavor. Whether you are a busy professional, a student, or a home chef, Sisain makes cooking easy, fun, and sustainable.</string>
-    <string name="title_button_next">Next</string>
-    <string name="title_button_register">Create An Account</string>
-    <string name="title_button_login">Already have an Account? Sign In</string>
-    <string name="boarding1_description">Illustration Onboarding First Page</string>
-    <string name="boarding2_description">Illustration Onboarding Second Page</string>
-    <string name="boarding3_description">Illustration Onboarding Third Page</string>
 
     <!-- Register & Login Strings  -->
     <string name="illustakun_description">Illustration Register and Login Page</string>
@@ -59,5 +42,55 @@
     <string name="email_john_doe_example_com">Email: john.doe@example.com</string>
     <string name="full_name_john_doe">Full Name: John Doe</string>
     <string name="header_profile">My Profile</string>
-    <string name="capstone">Capstone </string>
+    <string name="capstone">Capstone Team C242-PS452</string>
+
+    <!-- string saci  -->
+    <!-- Splash Strings -->
+    <string name="title_splash">Transform What You Have\nInto\nWhat You Crave</string>
+    <string name="logo_description">Sisain App logo</string>
+
+    <!-- Onboarding Strings -->
+    <string name="title_on_boarding_first_slide">Welcome To Sisain!</string>
+    <string name="description_on_boarding_first_slide">Welcome to Sisain, where your kitchen creativity meets sustainability! Our app helps you make the most of your ingredients by providing delicious recipes tailored to what you already have on hand.</string>
+    <string name="title_on_boarding_second_slide">Discover Endless Possibilities</string>
+    <string name="description_on_boarding_second_slide">With Sisain, every meal is an opportunity to explore new flavors and techniques. Our smart recipe suggestions are designed to inspire you, utilizing the ingredients you already have at home</string>
+    <string name="title_on_boarding_third_slide">Cook Smart, Waste Less with Sisain!</string>
+    <string name="description_on_boarding_third_slide">Simply input what you have on hand, and let our app suggest tailored recipes that minimize waste and maximize flavor. Whether you are a busy professional, a student, or a home chef, Sisain makes cooking easy, fun, and sustainable.</string>
+    <string name="title_button_next">Next</string>
+    <string name="title_button_register">Create An Account</string>
+    <string name="title_button_login">Already have an Account? Sign In</string>
+    <string name="boarding1_description">Illustration Onboarding First Page</string>
+    <string name="boarding2_description">Illustration Onboarding Second Page</string>
+    <string name="boarding3_description">Illustration Onboarding Third Page</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="serius_belum_ada_akun_ya_udah_nmari_kita_buat">Serius belum ada akun? Ya udah\nMari kita buat !</string>
+    <string name="welcome_sainers">Welcome Sainers !</string>
+    <string name="illustration">Illustration</string>
+    <string name="masukkan_kata_sandi">Enter Your Password</string>
+    <string name="register">Register</string>
+    <string name="sudah_ada_akun">Sudah ada akun ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="back">Back</string>
+    <string name="logo">Logo</string>
+    <string name="creator_header">Meet the greatest people who gave their all to make it possible to realizing this useful app</string>
+    <string name="mobdev_team">Ahmad Bintara Mansur - Aisha Neurini Kusuma</string>
+    <string name="mobile_development_team">Mobile Development Team</string>
+    <string name="cloud_computing_team">Cloud Computing Team</string>
+    <string name="aisha_neurini">Aisha Neurini</string>
+    <string name="ahmad_bintara">Ahmad Bintara</string>
+    <string name="muhammad_faisal">Muhammad Faisal</string>
+    <string name="naufal_nazhir">Naufal Nazhir</string>
+    <string name="cc_team">Muhammad Faisal - Naufal Nazhir Ahmaudizar</string>
+    <string name="machine_learning_team">Machine Learning Team</string>
+    <string name="ghani_raffi">Ghani Raffi</string>
+    <string name="ghani_raffi_irawan_muhammad_ridho_hidayat_mut">Ghani Raffi Irawan - Muhammad Ridho Hidayat - Mutia Sahira</string>
+    <string name="muhammad_ridho">Muhammad Ridho</string>
+    <string name="mutia_sahira">Mutia Sahira</string>
+    <string name="creator_page">Creator Page</string>
+    <string name="favourite_button">Favourite Button</string>
+    <string name="steps">Steps</string>
 </resources>

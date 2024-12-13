@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorbgprof"
-    tools:context=".ui.ui.views.User">
+    tools:context=".ui.ui.views.UserActivity">
 
     <LinearLayout
         android:id="@+id/header_back"

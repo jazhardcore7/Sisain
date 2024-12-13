@@ -1,106 +1,46 @@
 package com.sisain.capstone.ui.ui.views.auth
 
-import ApiService
-import RegisterRequest
-import RegisterResponse
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.*
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.sisain.capstone.R
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-//import com.sisain.capstone.data.remote.ApiService
-import com.sisain.capstone.network.RetrofitClient
-import com.sisain.capstone.network.NetworkConfig
-import retrofit2.Retrofit
-
-import retrofit2.converter.gson.GsonConverterFactory
+import com.sisain.capstone.data.userlocaldb.MyApp
+import com.sisain.capstone.data.userlocaldb.User
+import com.sisain.capstone.databinding.ActivityRegisterBinding
+import com.sisain.capstone.ui.viewmodel.UserViewModelFactory
+import com.sisain.capstone.viewmodel.UserViewModel
 
 class RegisterActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegisterBinding
+    private val userViewModel: UserViewModel by viewModels {
+        UserViewModelFactory(MyApp.appDatabase.userDao())
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val usernameEditText = findViewById<EditText>(R.id.register_username)
-        val emailEditText = findViewById<EditText>(R.id.register_email)
-        val passwordEditText = findViewById<EditText>(R.id.register_password)
-        val confirmPasswordEditText = findViewById<EditText>(R.id.confirm_password)
-        val registerButton = findViewById<Button>(R.id.btn_register)
-        val loginButton = findViewById<TextView>(R.id.btn_login)
+        // Tombol untuk register
+        binding.btnRegister.setOnClickListener {
+            val username = binding.etUsername.text.toString()
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
 
-        // Register button click listener
-        registerButton.setOnClickListener {
-            val username = usernameEditText.text.toString().trim()
-            val email = emailEditText.text.toString().trim()
-            val password = passwordEditText.text.toString().trim()
-            val confirmPassword = confirmPasswordEditText.text.toString().trim()
-
-            // Logic validasi enter
-            if (TextUtils.isEmpty(username)) {
-                usernameEditText.error = getString(R.string.error_username_required)
-                return@setOnClickListener
-            }
-            if (TextUtils.isEmpty(email)) {
-                emailEditText.error = getString(R.string.error_email_required)
-                return@setOnClickListener
-            }
-            if (TextUtils.isEmpty(password)) {
-                passwordEditText.error = getString(R.string.error_password_required)
-                return@setOnClickListener
-            }
-            if (password != confirmPassword) {
-                confirmPasswordEditText.error = getString(R.string.error_password_mismatch)
-                return@setOnClickListener
-            }
-
-            // Ngirim register user
-            registerUser(username, email, password)
-        }
-
-        // Login button click listener
-        loginButton.setOnClickListener {
-            // Redirect ke LoginActivity
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-    }
-
-    private fun registerUser(username: String, email: String, password: String) {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://your-api-url.com/") // Nanti ganti API base URLnya
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val apiService = retrofit.create(ApiService::class.java)
-        val request = RegisterRequest(username, email, password)
-
-        apiService.registerUser(request).enqueue(object : Callback<RegisterResponse> {
-            override fun onResponse(
-                call: Call<RegisterResponse>,
-                response: Response<RegisterResponse>
-            ) {
-                if (response.isSuccessful && response.body()?.success == true) {
-                    Toast.makeText(
-                        this@RegisterActivity,
-                        "Registrasi berhasil!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+            val newUser = User(username = username, email = email, password = password)
+            userViewModel.register(newUser) { isSuccess ->
+                if (isSuccess) {
+                    Toast.makeText(this, "Register berhasil", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, LoginActivity::class.java))
                 } else {
-                    Toast.makeText(
-                        this@RegisterActivity,
-                        response.body()?.message ?: "Maaf registrasi gagal",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Register gagal", Toast.LENGTH_SHORT).show()
                 }
             }
-
-            override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                Toast.makeText(this@RegisterActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
+        }
     }
-
 }

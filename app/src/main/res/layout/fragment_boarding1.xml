@@ -42,11 +42,12 @@
             android:layout_width="297dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:textSize="20dp"
             android:background="@drawable/onboarding_rounded_button"
             android:fontFamily="@font/itim_font_family"
             android:text="@string/title_button_next"
             android:textAllCaps="false"
-            android:textColor="@color/colorOnPrimary" />
+            android:textColor="@color/colorOnPrimary"/>
 
     </LinearLayout>
 

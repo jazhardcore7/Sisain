@@ -36,7 +36,7 @@
             android:exported="true" >
         </activity>
         <activity
-            android:name=".ui.ui.views.User"
+            android:name=".ui.ui.views.UserActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
