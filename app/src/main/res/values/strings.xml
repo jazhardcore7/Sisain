@@ -20,6 +20,23 @@
     <string name="boarding2_description">Illustration Onboarding Second Page</string>
     <string name="boarding3_description">Illustration Onboarding Third Page</string>
 
+    <!-- Register & Login Strings  -->
+    <string name="illustakun_description">Illustration Register and Login Page</string>
+    <string name="register_header">Welcome Sainers!</string>
+    <string name="register_subheader">Serius belum ada akun? Ya udah, mari kita buat!</string>
+    <string name="register_username">Username</string>
+    <string name="hint_register_username">Enter Your Username</string>
+    <string name="register_email">Email</string>
+    <string name="hint_register_email">Enter Your Email</string>
+    <string name="register_password">Password</string>
+    <string name="hint_register_password">Enter Your Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="hint_confirm_password">Confirm Your Password</string>
+    <string name="error_username_required">Username is required</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+
     <!-- Recipe home value -->
     <string name="add_ingridients">+ Tambahkan bahan</string>
     <string name="search_text">Cari atau tambahkan bahan anda disini</string>

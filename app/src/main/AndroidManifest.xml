@@ -25,7 +25,6 @@
 
         <activity
             android:name=".ui.ui.views.auth.RegisterActivity"
-            android:theme="@style/Theme.AppCompat"
             android:exported="false" />
         <activity
             android:name=".ui.ui.views.auth.LoginActivity"
