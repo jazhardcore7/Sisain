@@ -34,7 +34,7 @@
     <string name="favourite">Favourite</string>
     <string name="recipe">Recipe</string>
     <string name="recipe_name">Recipe Name</string>
-    <string name="back_button">Back Button</string>
+    <string name="back_btn">Back</string>
     <string name="recipe_details">Recipe Details</string>
     <string name="save_your_fav">Save your favourite recipe by clicking Heart Button in Recipe Detail Page</string>
     <string name="empty_state_image">Empty State Image</string>
@@ -94,6 +94,14 @@
     <string name="muhammad_ridho">Muhammad Ridho</string>
     <string name="mutia_sahira">Mutia Sahira</string>
     <string name="creator_page">Creator Page</string>
-    <string name="favourite_button">Favourite Button</string>
+    <string name="favourite_btn">Favourite Button</string>
     <string name="steps">Steps</string>
+    <string name="profile">Profile</string>
+    <string name="step_description_goes_here">Step description goes here</string>
+    <string name="your_saved_recipes">Your Saved Recipes</string>
+    <string name="profile_button_fav">Profile Button</string>
+    <string name="chicken_egg_scramble">Chicken Egg Scramble</string>
+    <string name="schicken_egg_scramble">Chicken Egg Scramble</string>
+    <string name="recipe_left">Cheeseburger Soup</string>
+    <string name="fresh_strawberry_pie">Fresh Strawberry Pie</string>
 </resources>

@@ -10,41 +10,36 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var bottomNavigationView: BottomNavigationView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
-        // Set default fragment
+        // Set default fragment (RecipeFragment)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, RecipeFragment()) // Display RecipeFragment first
+                .replace(R.id.fragmentContainer, RecipeFragment())
                 .commit()
         }
 
-        // Handle bottom navigation selection
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            var selectedFragment: Fragment? = null
-
+        // Handle bottom navigation item clicks
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_recipe -> {
-                    selectedFragment = RecipeFragment()
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, RecipeFragment())
+                        .commit()
+                    true
                 }
                 R.id.nav_favourite -> {
-                    selectedFragment = FavouriteFragment()
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, FavouriteFragment())
+                        .commit()
+                    true
                 }
+                else -> false
             }
-
-            selectedFragment?.let {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, it)
-                    .commit()
-            }
-            true
         }
     }
 }
-

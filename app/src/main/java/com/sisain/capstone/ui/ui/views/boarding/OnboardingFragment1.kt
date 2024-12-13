@@ -18,7 +18,7 @@ class OnboardingFragment1 : Fragment(R.layout.fragment_boarding1)
 
         val nextButton: Button = view.findViewById(R.id.btn_next)
         nextButton.setOnClickListener {
-            (activity as? OnBoardingActivity)?.navigateToPage(1)
+            (activity as? OnBoardingActivity)?.navigateToPage(3)
         }
 
         return view
