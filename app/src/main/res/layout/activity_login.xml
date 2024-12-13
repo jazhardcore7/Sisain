@@ -21,7 +21,7 @@
 
     <!-- Title Text -->
     <TextView
-        android:id="@+id/register_header"
+        android:id="@+id/login_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="272dp"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <TextView
-        android:id="@+id/register_subheader"
+        android:id="@+id/login_subheader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
@@ -48,7 +48,7 @@
 
     <!-- Username -->
     <TextView
-        android:id="@+id/title_register_username"
+        android:id="@+id/title_login_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -56,12 +56,12 @@
         android:textColor="@color/colorPrimary"
         android:fontFamily="@font/itim_font_family"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/register_subheader"
+        app:layout_constraintTop_toBottomOf="@id/login_subheader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingLeft="16dp"/>
     <EditText
-        android:id="@+id/register_username"
+        android:id="@+id/login_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_register_username"
@@ -74,12 +74,12 @@
         android:drawablePadding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_register_username"
+        app:layout_constraintTop_toBottomOf="@id/title_login_username"
         android:layout_marginHorizontal="16dp" />
 
     <!-- Password -->
     <TextView
-        android:id="@+id/title_register_password"
+        android:id="@+id/title_login_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -87,12 +87,12 @@
         android:textColor="@color/colorPrimary"
         android:fontFamily="@font/itim_font_family"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/register_username"
+        app:layout_constraintTop_toBottomOf="@id/login_username"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingLeft="16dp"/>
     <EditText
-        android:id="@+id/register_password"
+        android:id="@+id/login_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_register_password"
@@ -106,7 +106,7 @@
         android:drawablePadding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_register_password"
+        app:layout_constraintTop_toBottomOf="@id/title_login_password"
         android:layout_marginHorizontal="16dp" />
 
     <!-- Login Button -->
@@ -119,7 +119,7 @@
         android:background="@drawable/regis_rounded_button"
         android:textColor="@color/colorOnPrimary"
         android:fontFamily="@font/itim"
-        app:layout_constraintTop_toBottomOf="@id/register_password"
+        app:layout_constraintTop_toBottomOf="@id/login_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="16dp"
